@@ -8,7 +8,7 @@ There are two main components to its use: (The names are subject to change)
 - Layers
 
 ### Models:
-Models are wrappers around LLMs which standardize the I/O in order to abstract the model specifics away.
+Models are wrappers around instruction-tuned LLMs which standardize the I/O in order to abstract the model specifics away.
 To define a new custom model, you need only to extend the Model class and implement the generate method, but often the __init__ method will also need implemented to store things like the actual LLM (if not using an API) or other specifications.
 To use existing models, just create an instance of their class with whatever parameters they require.
 E.g.
