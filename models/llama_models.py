@@ -51,6 +51,8 @@ class Llama3(Model):
     # Used to adapt the various I/O structures of LLMs (API queries, model calls, etc.) into the form which LMFlow uses.
     # To implement, you must define the generate method and you may override the __init__ method if your model requires a mem
     def __init__(self, model_dir, tokenizer_dir, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), **kwargs):
+        raise NotImplementedError("This model is not yet implemented")
+        # The Llama3 model does is not working currently. It is a work in progress.
         super().__init__(**kwargs)
         self.HEAD_B, self.HEAD_E = "<|start_header_id|>", "<|end_header_id|>"
         self.SYS = f"{self.HEAD_B}system{self.HEAD_E}\n\n"
@@ -94,6 +96,8 @@ class Llama31(Llama3):
     # Used to adapt the various I/O structures of LLMs (API queries, model calls, etc.) into the form which LMFlow uses.
     # To implement, you must define the generate method and you may override the __init__ method if your model requires a mem
     def __init__(self, model_dir, tokenizer_dir, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), **kwargs):
+        raise NotImplementedError("This model is not yet implemented")
+        # The Llama3.1 model does is not working currently. It is a work in progress.
         super().__init__(model_dir, tokenizer_dir, device, **kwargs)
         self.EOT = "<|eot_id|>\n" # End of "turn"
     def generate(self, system_prompt, input_prompt, contexts):
