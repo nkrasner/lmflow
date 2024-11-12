@@ -70,6 +70,6 @@ fmt_func allows you to preprocess the inputs before they are placed into the pro
 - Context tracking:
   - Pass contexts to a layer and receive the updated context
   - Context could also carry gradients for use in finetuning
-- Containers:
+- Black Boxing:
   - Essentially a wrapper around a task which takes multiple layers to complete
   - (Possibly unnecessary since this can just be done with a function definition)
